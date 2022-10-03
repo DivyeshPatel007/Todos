@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+
+:root {}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+li {
+    list-style-type: none;
+}
+
+body {
+    background-image: linear-gradient(120deg, #f6d365, #fda085);
+    color: white;
+    font-family: 'poppins';
+    height: 100vh;
+}
+
+header {
+    font-size: 1.5rem;
+
+}
+
+header,
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20vh;
+}
+
+form input,
+form button {
+    padding: 0.5rem;
+    font-size: 2rem;
+    border: none;
+    background-color: #fff;
+}
+
+form button {
+    color: #fda085;
+    background-color: #fff;
+    cursor: pointer;
+    transition: all 0.5s ease;
+
+}
+
+form button:hover {
+    background-color: #fda085;
+    color: #fff;
+}
+
+.todo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.todo-item {
+    padding: 0rem 0.5rem;
+}
+
+.todo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    color: black;
+    font-size: 1.5rem;
+    transition: all 0.5s ease;
+}
+
+.todo-list {
+    min-width: 30%;
+}
+
+.todo li {
+    flex: 1;
+}
+
+/* Buttons */
+
+
+.check-button,
+.delete-button {
+    background: #ff4f47;
+    color: #fff;
+    padding: 1rem;
+    cursor: pointer;
+    border: none;
+    font-size: 1rem;
+    margin-left: 5px;
+}
+
+.fall {
+    transform: translateY(8rem) rotateZ(20deg);
+    opacity: 0;
+}
+
+
+.check-button {
+    background: rgb(73, 204, 73);
+}
+
+.fa-trash,
+.fa-check {
+    pointer-events: none;
+}
+
+/* Completed */
+.completed {
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+
+/* filter */
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+    outline: none;
+    border: none;
+    box-shadow: none;
+    border: 0 !important;
+    background-image: none;
+    color: #ff6f47;
+    width: 8rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.select {
+    margin: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.select::after {
+    content: "\25BC";
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: #ff6f47;
+    padding: 0.5rem;
+    cursor: pointer;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.select:hover::after {
+    background: white;
+    color: #ff6f47;
+
+}
